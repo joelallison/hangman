@@ -75,10 +75,12 @@ public class Main {
 
         char guess = '0';
         int chances = chosenWord.length() + 4;
-        System.out.println("Food related hangman!\nList found at https://www.wordnik.com/lists/food--21\nHave fun!\n\n");
+        System.out.println("Food related hangman!\nList found at https://www.wordnik.com/lists/food--21\nHave fun!\n\nThe word is " + chosenWord.length() + " characters long.\n");
+
 
         do {
             //print the word
+            System.out.println();
             for (int i = 0; i < chosenWord.length(); i++) {
                 if (guessed.get(i).equals(true)) {
                     System.out.print(chosenWord.charAt(i));
@@ -96,10 +98,20 @@ public class Main {
                     guessed.set(i, true);
                 }
             }
+
+            if(chosenWord.indexOf(guess) == -1){
+                System.out.println("Nope!");
+            }
+
             chances--;
         } while (guessed.contains(false) && chances > 0);
         for (int i = 0; i < chosenWord.length(); i++) {
             System.out.print(chosenWord.charAt(i) + " ");
+        }
+        if (chances > 0){
+            System.out.println("\nYou got it!");
+        }else{
+            System.out.println("\nBetter luck next time...");
         }
     }
 }
