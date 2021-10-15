@@ -1,0 +1,54 @@
+takoyaki
+pesto
+enoki
+dim sum
+banh beo
+macaron
+poutine
+filet mignon
+fried rice
+wonton
+lo
+chow
+bulgogi
+kimbap
+pasta
+potsticker
+peking
+croissant
+eggroll
+spring
+hummus
+tator
+naan
+crepe
+ahi
+poke
+udon
+sashimi
+sushi
+okonomiyaki
+pad
+fries
+quesadilla
+burrito
+taco
+jasmine
+kimchi
+tofu
+pizza
+matcha
+oolong
+taro
+chai
+tea
+hu
+pho
+bun
+bok
+burger
+dumpling
+hot
+shabu
+ramen
+curry

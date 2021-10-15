@@ -1,62 +1,32 @@
 package com.joelallison;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
+import java.io.File;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+
+        String dir = System.getProperty("user.dir");
+
+        File wordlistFile = new File(dir + "\\src/com/joelallison/hangmanList.txt");
+
+        Scanner fileReader = new Scanner(wordlistFile);
+
+        ArrayList<String> words = new ArrayList<String>();
+
+        while (fileReader.hasNextLine()) {
+            String word = fileReader.nextLine();
+            words.add(word);
+        }
+        fileReader.close();
 
         //hangman list found at https://www.wordnik.com/lists/food--21
-        ArrayList<String> words = new ArrayList<String>(Arrays.asList("takoyaki",
-                "pesto",
-                "enoki",
-                "dim sum",
-                "banh beo",
-                "macaron",
-                "poutine",
-                "filet mignon",
-                "fried rice",
-                "wonton",
-                "lo mein",
-                "chow mein",
-                "bulgogi",
-                "kimbap",
-                "pasta",
-                "potsticker",
-                "peking duck",
-                "croissant",
-                "eggroll",
-                "spring roll",
-                "hummus",
-                "tator tot",
-                "naan",
-                "crepe",
-                "ahi tuna",
-                "poke",
-                "udon",
-                "sashimi",
-                "sushi",
-                "okonomiyaki",
-                "pad thai",
-                "fries",
-                "quesadilla",
-                "burrito",
-                "taco",
-                "chai",
-                "tea",
-                "pho",
-                "bun bo hue",
-                "bok choy",
-                "burger",
-                "dumpling",
-                "hot pot",
-                "shabu shabu",
-                "ramen",
-                "curry"
-        ));
+
 
         ArrayList<Boolean> guessed = new ArrayList<Boolean>();
 
